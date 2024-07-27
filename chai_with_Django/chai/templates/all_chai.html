@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block title %} Chai Page {% endblock %}
+
+{% block content %}
+<h1
+class="items-center justify-center h-screen text-3xl font-bold align-middle grid"
+>
+All Chai For this bitch
+</h1>
+<div class="grid grid-cols-3 gap-4 ">
+
+  {% for chai in chais %}
+  <div class=" p-5 bg-transparent rounded-lg shadow-xl">
+    <img src="{{chai.image.url}}" alt="" />
+    <h3 class="text-2xl">{{chai.name}}</h3>
+    <a href="{% url "chai_detail" %}">
+      <button class="bg-white text-black p-2 m-4 rounded-lg w-full ">Fuck me bitch</button>
+    </a>
+  </div>
+
+  {% endfor %}
+</div>
+{% endblock %}
